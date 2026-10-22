@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,600&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#ffdad6","inverse-surface":"#e2e2e6","on-surface":"#e2e2e6","error":"#ffb4ab","tertiary-container":"#9299a7","primary":"#ffb597","outline":"#a98a7e","primary-fixed":"#ffdbcd","surface-container-low":"#1a1c1f","secondary-fixed-dim":"#fabc4d","error-container":"#93000a","on-surface-variant":"#e2bfb2","on-secondary-fixed":"#281900","surface":"#111316","on-tertiary-container":"#2a313d","surface-variant":"#333538","on-secondary-container":"#3a2600","tertiary-fixed-dim":"#c0c7d5","tertiary-fixed":"#dce3f2","primary-container":"#ff6a1a","on-secondary":"#432c00","secondary-container":"#bd8718","on-primary":"#581d00","on-primary-fixed-variant":"#7d2d00","inverse-primary":"#a43d00","surface-container-highest":"#333538","surface-bright":"#37393d","on-primary-container":"#591e00","inverse-on-surface":"#2f3034","on-tertiary-fixed":"#151c27","background":"#111316","primary-fixed-dim":"#ffb597","outline-variant":"#5a4137","on-background":"#e2e2e6","surface-tint":"#ffb597","tertiary":"#c0c7d5","on-tertiary":"#2a313c","on-secondary-fixed-variant":"#604100","surface-dim":"#111316","on-tertiary-fixed-variant":"#404753","on-primary-fixed":"#360f00","surface-container":"#1e2023","on-error":"#690005","secondary-fixed":"#ffdead","secondary":"#fabc4d","surface-container-high":"#282a2d","surface-container-lowest":"#0c0e11"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"margin-desktop":"3rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem","gutter":"1rem","space-xl":"2.5rem","space-md":"1rem",margin:"1rem","margin-tablet":"2rem"},fontFamily:{"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"display-lg":["Barlow Condensed"],"headline-sm":["Barlow Condensed"],"headline-xl":["Barlow Condensed"],"body-md":["Inter"],"label-sm":["JetBrains Mono"],"display-lg-mobile":["Barlow Condensed"],"headline-lg":["Barlow Condensed"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Barlow Condensed"],"headline-md":["Barlow Condensed"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"500"}],"label-lg":["14px",{lineHeight:"18px",letterSpacing:"0.08em",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"60px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-xl":["40px",{lineHeight:"44px",letterSpacing:"0.03em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"500"}],"display-lg-mobile":["38px",{lineHeight:"42px",letterSpacing:"0.03em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"36px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl-mobile":["30px",{lineHeight:"34px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"28px",letterSpacing:"0.02em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-surface-variant"><div class="h-20 max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Prefer India Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uh0aB60ZbMY5axjRv-La_5MgQNY8m9iUYzeIaaiYmdC8RvyfbrXxopzvnVh0efdug_Hgo5DfOWIC3AS25BWD3xhHMFNDdWjvkVlQwssR5QeAKSjyj73WCoqghtzoZTmcSCjPATIrCXsopHL00buxWWat_Ucf_MoxlBMu4eYQ4r12FpQiu2uWHzyb-la-eMzxBh7ZbT8ZNVANKM4A_DjWTS7M2P5aqkvUMyAeCuE30mld9vufDjSKQ33z4"/><div class="flex flex-col border-l border-surface-variant pl-space-sm"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">Prefer India</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Heavy Mill Cranes &amp; Lifters</span></div></div><nav class="hidden xl:flex items-center gap-space-lg h-full" data-active-classes="text-primary-container border-b-2 border-primary-container font-semibold"><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="home" href="#">Home</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="about" href="#">About</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="products" href="#">Products</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="gallery" href="#">Gallery</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="videos" href="#">Videos</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="clientele" href="#">Clientele</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="downloads" href="#">Downloads</a><a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors tracking-wider uppercase border-b-2 border-transparent" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container border border-surface-variant px-space-sm py-1 rounded"><span class="material-symbols-outlined text-secondary text-[16px]">call</span><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors tracking-wider" href="tel:+911294008822">+91 (0) 129 400 8822</a></div><a class="inline-flex items-center justify-center bg-primary-container hover:bg-primary text-on-primary-container px-space-md py-2 rounded font-headline-sm text-headline-sm uppercase tracking-wider transition-all shadow-[0_0_12px_rgba(255,106,26,0.3)]" data-path="get-a-quote" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Precision Technical Breadcrumb & Specification Meta Strip -->
+<section class="w-full bg-surface-container-lowest px-margin md:px-margin-tablet lg:px-margin-desktop py-space-sm">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs tracking-wider">
+<a class="hover:text-primary transition-colors uppercase" href="#">HQ-ROOT</a>
+<span class="text-outline-variant font-bold">/</span>
+<a class="hover:text-primary transition-colors uppercase" href="#">HEAVY EQUIPMENT</a>
+<span class="text-outline-variant font-bold">/</span>
+<span class="text-primary-container font-semibold uppercase">COIL HANDLING CATALOG</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          STD: ASME B30.20-2021 &amp; DIN EN 13155
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary-container">tune</span>
+          FILTERS APPLIED: <strong class="text-primary ml-1" id="activeFilterCounter">6</strong>
+</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant">DOC.REV: 2024-C3-MET</span>
+</div>
+</div>
+</section>
+<!-- Technical Category Hero Section -->
+<section class="w-full bg-surface-container-low relative overflow-hidden py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- CAD Blueprint Grid Backdrop SVG -->
+<div class="absolute inset-0 pointer-events-none opacity-15">
+<svg class="w-full h-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="cadGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffb597" stroke-dasharray="2 2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#cadGrid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Radial Hot Thermal Glow -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container/10 blur-3xl rounded-full pointer-events-none -mr-20 -mt-20"></div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="space-y-space-sm max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-primary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider font-bold">SECTION 02 // TONGS &amp; TILTERS</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">10 — 80 MT SWL CLASSIFICATION</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-label-sm">ISO 9001:2015 FACTORY TESTED</span>
+</div>
+<h1 class="font-display-lg text-display-lg uppercase tracking-tight text-on-surface">
+            COIL HANDLING <span class="text-primary-container">EQUIPMENT</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Heavy-duty mechanical, electromechanical, and hydraulic coil turning, gripping, and internal-transfer systems engineered for continuous 24/7 service in hot strip mills, cold rolling complexes, slitting lines, and blast furnace yard operations. Built to endure temperatures up to 800°C with 100% duty cycle rating.
+          </p>
+</div>
+<!-- Telemetry Matrix Box -->
+<div class="bg-surface-container p-space-md shadow-xl flex flex-col gap-space-sm shrink-0 lg:w-80">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant uppercase">
+<span>MILL TELEMETRY</span>
+<span class="flex items-center gap-1 text-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+              STANDBY 100%
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs font-label-md text-label-md pt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">CORE FAMILIES</span>
+<span class="text-primary font-bold text-headline-sm font-headline-sm">05 RIGS</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">MAX FIELD LOAD</span>
+<span class="text-secondary font-bold text-headline-sm font-headline-sm">80 MT SWL</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs flex flex-col col-span-2">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">STRIP COMPATIBILITY</span>
+<span class="text-on-surface font-semibold text-label-md font-label-md">HOT (800°C) &amp; COLD FINISH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Characteristic Chips Strip -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>150% FACTORY PROOF LOAD TESTING ON REINFORCED RIGID BENCH</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container">speed</span>
+<span>CYCLE OPTIMIZED: 45 SEC COMPLETE 90° BED ARTICULATION</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">engineering</span>
+<span>CUSTOM ARBOR, EYE &amp; TONG RADII FOR ASTM / DIN STANDARD COIL DIMENSIONS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Equipment Catalog Section -->
+<section class="w-full bg-surface px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- Left Filter Rig Panel -->
+<aside class="w-full lg:w-[320px] shrink-0 bg-surface-container-low p-space-md shadow-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container p-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">filter_alt</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-semibold">APPLICATION FILTER</span>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase" id="resetFiltersBtn">
+            [RESET]
+          </button>
+</div>
+<!-- Slider Control Envelope -->
+<div class="space-y-space-xs bg-surface-container-lowest p-space-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">CAPACITY ENVELOPE [MT]</label>
+<span class="font-label-md text-label-md font-bold text-primary-container" id="capacityValue">10 — 80 MT</span>
+</div>
+<input class="w-full h-1 bg-surface-variant accent-primary-container cursor-pointer" id="capacityRange" max="80" min="10" type="range" value="80"/>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>MIN: 10 MT</span>
+<span>NOMINAL: 45 MT</span>
+<span>MAX: 80 MT</span>
+</div>
+</div>
+<!-- Rig Type Filters -->
+<div class="space-y-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide flex items-center justify-between">
+<span>RIGGING TOPOLOGY</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">05 TYPES</span>
+</h2>
+<div class="space-y-1.5 pt-1">
+<label class="flex items-center gap-space-xs p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-none accent-primary-container bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Motorized Coil Tongs (H/V)</span>
+</label>
+<label class="flex items-center gap-space-xs p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-none accent-primary-container bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Coil Upenders / Tilters (90°)</span>
+</label>
+<label class="flex items-center gap-space-xs p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-none accent-primary-container bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Coil Transfer Cars (Rail/SP)</span>
+</label>
+<label class="flex items-center gap-space-xs p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-none accent-primary-container bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Mechanical Counterweighted C-Hooks</span>
+</label>
+<label class="flex items-center gap-space-xs p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-none accent-primary-container bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Vacuum Coil End-Face Lifters</span>
+</label>
+</div>
+</div>
+<!-- Mill Processing Environment -->
+<div class="space-y-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">PROCESSING ENVIRONMENT</h2>
+<div class="space-y-1.5 pt-1">
+<label class="flex items-center justify-between p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Hot Strip Mill (≤ 800°C)</span>
+<input checked="" class="w-3.5 h-3.5 accent-primary-container" name="mill_env" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Cold Rolling Complex</span>
+<input class="w-3.5 h-3.5 accent-primary-container" name="mill_env" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Slitting &amp; Annealing Line</span>
+<input class="w-3.5 h-3.5 accent-primary-container" name="mill_env" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Port / Stevedoring Yard</span>
+<input class="w-3.5 h-3.5 accent-primary-container" name="mill_env" type="radio"/>
+</label>
+</div>
+</div>
+<!-- Coil Orientation Filter -->
+<div class="space-y-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">COIL AXIS ORIENTATION</h2>
+<div class="grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<button class="p-2 bg-primary-container text-on-primary-container font-semibold uppercase tracking-wider text-center" type="button">
+              HORIZONTAL (EYE-H)
+            </button>
+<button class="p-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant uppercase tracking-wider text-center" type="button">
+              EYE-TO-SKY (VERT)
+            </button>
+</div>
+</div>
+<!-- Action Links -->
+<div class="pt-space-xs space-y-space-xs">
+<a class="w-full flex items-center justify-center gap-space-xs p-2.5 bg-surface-container hover:bg-surface-container-highest text-primary font-headline-sm text-headline-sm uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+            EXPORT ENVELOPE SPEC (.DXF/PDF)
+          </a>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant uppercase">
+            CALIBRATED FOR FEM 1.001 / DIN 15018 CL. H2-B4
+          </div>
+</div>
+</aside>
+<!-- Right Equipment Catalog Grid -->
+<div class="flex-1 w-full space-y-space-lg">
+<!-- Live Filter Feed Bar -->
+<div class="bg-surface-container p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[18px]">view_in_ar</span>
+<span class="uppercase tracking-wider font-semibold">SHOWING 6 ENGINEERED CONFIGURATIONS</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span>SORT: <strong class="text-on-surface">CAPACITY [HIGH TO LOW]</strong></span>
+<span class="hidden md:inline font-mono">ENVELOPE TOLERANCE: ±0.05 MM</span>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1: Motorized Coil Tong Lifter (CL-M60) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavy industrial motorized horizontal coil tong lifter with dual forged arms coated in safety orange, hoisting a massive 50-tonne hot rolled steel coil in a dark blast furnace mill, volumetric smoke, mechanical precision, dramatic industrial rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOigizO-iy_MzCniRA4GsRFatwyaTBx5Xx2AVE_apT4-_eJr-WDatVcBYvaNJuKZ2um9ASZ_ey6snY8kTBi6xjOuFeXNZfvGNF_FQ1Sr-XXQHSfhbMrvpB7VMiqSvu3yLCfZ2V0Ya3-JpYJbwO7XKDI_DA_L-F894zMZdLa-Go00BBT1yhQ-6J1dRapnbzgRhMzEb5WMbPVR-bKkhbP9aLcXWi_vu1Bwn1KQ6H0XHGHsWUPXJlLkn"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: CL-M60</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">15 — 60 MT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  DUTY: 24/7 HSM MILL
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-wider">MOTORIZED SCISSOR / RACK SYSTEM</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    Motorized Coil Tong Lifter
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Rack &amp; pinion horizontal coil tongs with optoelectronic photo sensors, motorized 360° continuous slewing ring, and protective polyurethane pads prevent surface score marks.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">COIL WIDTH ENVELOPE</span>
+<span class="text-on-surface font-mono font-semibold">600 — 2,100 mm</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">GRIP TRANSIT SPEED</span>
+<span class="text-on-surface font-mono font-semibold">1.2 m/min (VFD)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">SENSOR ARRAY</span>
+<span class="text-on-surface font-mono font-semibold">Triple Beam Photo</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">HEAT SHIELDING</span>
+<span class="text-secondary font-mono font-semibold">Class H / 800°C</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+<!-- Card 2: 30 MT Coil Upender Tilter (CU-30) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Massive 30-tonne steel coil upender mechanical tilter positioned on a foundry floor with dual heavy-duty hydraulic rams tilting a steel coil 90 degrees from vertical eye to horizontal axis, industrial safety striping, graphite and orange machinery tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUBvCkFFFROmx058SEM1fqgOL-F9IR3AqIXBfFQegANcC48cESVaF0rZvDJ_JKF0hHr4i16jKl0aybBk9DDT_kcRa2R874ar2uFMiBGHlbOeOmxwBwbkj31oL7v_PmasU15Z42yJqG97dl-v1LB1_xyxoGA9XLcRr1EPl8g372RSA0jpSgbbm-CrzLcxrjhfQqJFEnE4XUaLfNP2-LN5d5uscJGVr5ahwShYgX4TkyQiFINDhkPV5Y"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: CU-30</span>
+<span class="px-2 py-0.5 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase font-bold">30 MT (150% PROOF)</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  BED: 90° HYDRAULIC
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono tracking-wider">AXIAL REORIENTATION MACHINE</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    30 MT Coil Upender Tilter
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Twin heavy-duty hydraulic cylinders with engineered V-bed protective lining, 90° reorientation in 45 sec, and zero-shock deceleration cushioning preventing arbor deformation.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">TILT ARTICULATION</span>
+<span class="text-on-surface font-mono font-semibold">90.0° Precise End</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">MAX COIL OD</span>
+<span class="text-on-surface font-mono font-semibold">Ø 2,000 mm</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">CYCLE TIME</span>
+<span class="text-on-surface font-mono font-semibold">45.0 Seconds</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">HYDRAULIC POWER</span>
+<span class="text-primary font-mono font-semibold">18.5 kW Heavy Mill</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+<!-- Card 3: Rail Coil Transfer Car (CTC-60) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavy steel plant rail transfer car carrying two wound metal coils across ground level rail track in a steel fabrication yard, operator handheld RF remote control, yellow laser scan warnings, rugged gunmetal chassis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV3b8LePPDNB1cFI6n9yL1WO9tH--3wYnYt5k2dXaroVqzDBhkfsx2-CkNkEoZJ4sRtsxhsQZsNB4yTcvlQAvuL686UbnchUeNBEydeCBFs_iIClM_JS9fj5THXj5v6Lm4QNO7rf3l7TJ2_kQg4-G29fxLAVOL4hYB1m4g3Kq33OZn7UV3Le_6Egh69d6f7YHF5lKAz2PH9oh5bKagjjrZ3kfrg-Tkoxaj-co63BLhzxIyLJVKjHuk"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: CTC-60</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">20 — 80 MT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  PROPULSION: ONBOARD DIESEL/ELEC
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-wider">INTRA-BAY RAIL LOGISTICS</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    Rail Coil Transfer Car
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  High-torque planetary drive bogies with integrated hydraulic V-deck cradle, redundant industrial RF remote control, anti-collision laser scanner, and spring-applied disc brakes.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">TRANSIT SPEED</span>
+<span class="text-on-surface font-mono font-semibold">0 — 35 m/min</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">TRACK GAUGE</span>
+<span class="text-on-surface font-mono font-semibold">1676 mm / Custom</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">BED PROFILE</span>
+<span class="text-on-surface font-mono font-semibold">Hydraulic V-Cradle</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">BRAKING METHOD</span>
+<span class="text-error font-mono font-semibold">Fail-Safe Disc E-Stop</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+<!-- Card 4: Heavy Mill C-Hook with Counterweight (CH-35) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavy steel forged C-hook mill lifter with calibrated rear counterweight hanging from an overhead crane hook inside a cold strip warehouse, gripping a polished aluminum coil, technical blueprint lines in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGBQbAkEWnGcWAfNkiz5DdGJ_CQqNlX9ijFwOvKxaRDTHgbjyuBPQQSe9zjxgzu4UTaIvJAhtNKr0XMR6o9No6cZWrSgOJk3GemH984nDpMz_kn9nYHI6hgaqH3m_V48maK1MEBgAhcE_o4tnDrIVaC8gG_-q-Pn7w4wL7RqVmZVUb77SVANlM4OcYaJ7fEpr28PUSF4PIyuvbburmVS1LTj9pxkOE-szpCWpuLemIWggSwHyfP4p1"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: CH-35</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">10 — 45 MT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  SAFETY: 5:1 STRUCTURAL FACTOR
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono tracking-wider">PASSIVE COUNTERWEIGHT SUSPENSION</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    Heavy Mill C-Hook Rig
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  High-integrity alloy steel core, curved nose saddle with replaceable vulcanized nylon inserts, and precision lead-filled counterweight guaranteeing perfectly level empty balance.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">THROAT DEPTH</span>
+<span class="text-on-surface font-mono font-semibold">1,800 mm Clearance</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">TARE WEIGHT</span>
+<span class="text-on-surface font-mono font-semibold">~3,800 kg Solid</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">RADIUS PADDING</span>
+<span class="text-on-surface font-mono font-semibold">15mm Polyurethane</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">STANDARD</span>
+<span class="text-on-surface font-mono font-semibold">DIN 15401 Proof</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+<!-- Card 5: Dual-Orientation Eye-to-Sky Coil Grab (CG-V25) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Scissor action vertical coil grab lifting an eye-to-sky coiled sheet pack directly out of an industrial bell annealing furnace, glowing heat heat-wave refraction, heavy duty alloy clamp arms in metallic graphite tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZtctVX9Nf6U-yMd_m5koAznmB6kLOQVL5i0NOLb4_QOe1qrUP0Ri7NckNzpOMdDOh_DrWUyxU2r7SXsGBis8ChWK0CdIbPIgY5EWuZC4PehxdFTs5tcIEEcw2Co_q6a2fNc4fIci5mwl3xTCfWddEJ43jZsskDvaNtGlUPxlCocVRJurcupiKTMgVOSV9SPo6sQ5xwV4Z9NgUGRK9LMlHYFYC16XwacPDxftLLLNBvBCwpmW9QQP2"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: CG-V25</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">10 — 25 MT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  AXIS: VERTICAL EYE-TO-SKY
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-wider">FURNACE BATCH CLAMP SYSTEM</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    Eye-to-Sky Vertical Coil Grab
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Scissor-action mechanical grab with positive high-friction clamping pads designed for lifting coils in vertical axis directly into/out of bell annealing furnaces and stacking setups.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">INNER CORE (ID)</span>
+<span class="text-on-surface font-mono font-semibold">508 — 610 mm</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">MAX WALL THICKNESS</span>
+<span class="text-on-surface font-mono font-semibold">650 mm Maximum</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">LOCKING MECHANISM</span>
+<span class="text-on-surface font-mono font-semibold">Auto Gravitational</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">OPERATING TEMP</span>
+<span class="text-secondary font-mono font-semibold">Up to 600°C Cont.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+<!-- Card 6: Heavy Slit Coil Multi-Arm Handler (SH-15) -->
+<article class="bg-surface-container-low shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Multi arm finger steel coil lifter simultaneously holding five narrow slit coils on arbor arm inside a steel processing plant, mechanical linkages, high contrast dark environment with sparks in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAojUCBSmI0gP4GugAoQ8dWt_0k0cpnisvFEXODh8_iUgETQiqNFZBnA7jkZ-ayiKcTcQJsHgkrsJspUnSe3kbcOy9B8hInPk3v8VChT6gtoU5GT0YP89orkxWarE4Wa2EA1ejYlvcK3JsN1wCcnut8ONsWXIOOn99qUec9bBGvL8jIVsQi5pRv8lnCpEx7KRtDD08Qdu4aFB5_HsoDjCAavNJpUe1G3adP-R01WplHPZjosWNDiI-S"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm uppercase font-mono">SYS.REF: SH-15</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold">5 — 20 MT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm">
+                  APPLICATION: MULTI-SLIT BATCH
+                </div>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono tracking-wider">MULTI-STRIP PACK MANIPULATION</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide mt-0.5">
+                    Slit Coil Multi-Arm Handler
+                  </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Multi-pack finger lifter designed for simultaneous handling of multiple narrow slit steel coils directly off the recoiler arbor, with independent hydraulic segment spacing.
+                </p>
+<!-- Spec Grid -->
+<div class="bg-surface-container-lowest p-space-xs grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block uppercase">CANTILEVER REACH</span>
+<span class="text-on-surface font-mono font-semibold">2,400 mm Effective</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">SLIT WIDTH PER PACK</span>
+<span class="text-on-surface font-mono font-semibold">150 — 500 mm</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">RETRACTABLE FINGERS</span>
+<span class="text-on-surface font-mono font-semibold">4 Individual Zones</span>
+</div>
+<div>
+<span class="text-on-surface-variant block uppercase">FINISH PROTECTION</span>
+<span class="text-on-surface font-mono font-semibold">Brass Anti-Scratch</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center gap-space-xs font-label-sm text-label-sm">
+<a class="flex-1 py-2 bg-surface-container hover:bg-surface-container-highest text-on-surface text-center uppercase tracking-wider font-semibold transition-colors" href="#">
+                [ VIEW SPECS ]
+              </a>
+<a class="flex-1 py-2 bg-primary-container hover:bg-primary text-on-primary-container text-center uppercase tracking-wider font-bold transition-all shadow-[0_0_12px_rgba(255,106,26,0.25)]" href="#">
+                REQUEST QUOTE
+              </a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Industrial Plant CCTV / Commissioning Video Strip -->
+<section class="w-full bg-surface-container-lowest px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-[1440px] mx-auto space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm bg-surface-container p-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-error">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-bold tracking-widest uppercase">LIVE PLANT COMMISSIONING &amp; PROOF LOGS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-1">
+            COIL HANDLING RIGS IN ACTIVE MILL COMMISSIONING
+          </h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">
+          OPERATIONAL FEED: BALLABGARH TEST BED &amp; TIER-1 CLIENT SITES
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Video Card 1 -->
+<div class="bg-surface-container-low shadow-lg flex flex-col justify-between group">
+<div class="relative w-full h-48 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="CCTV surveillance angle of 60 MT motorized coil lifter moving glowing orange red steel coil inside a steam-filled steel rolling mill, telemetry crosshairs on screen, dark raw industrial interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNOo_CbnqCScOpLlS1aqvEtdj6bn9OnZ5xugUput6hcIxvMm5aS42rWMzL5wQkPD1CoU-J0XfbUaiMbChMmRW0W97UPiM_QGx5EKfIDBfgDGJNfmViiyKISgLSUfPF1vEkexd9McE8P2iPdX3Sdzf8O_LxdhdnvPCWv-AbumGTpFjvtcaZJgcUkasNP8Datq8JqKjm1Z03U_9Uv_cMq8t7MKyoyAeeRWP9UIryb0Mg8d_TWXy2bql8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-2 py-0.5 bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> CAM_01 // HSM
+            </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-mono font-bold">
+              05:42 REC
+            </div>
+<!-- Play icon overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/80 border border-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[24px]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide group-hover:text-primary transition-colors">
+              60 MT Motorized Coil Lifter in 24/7 Hot Strip Mill Operation
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous duty coil maneuvering under 750°C surface radiation with slewing calibration.</p>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="bg-surface-container-low shadow-lg flex flex-col justify-between group">
+<div class="relative w-full h-48 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Plant floor proof-test cage with 30-tonne coil upender completing hydraulic 90 degree flip cycle with telemetry overlay lines and digital angle readouts, gunmetal machinery frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLUNU8E4-Gh5-lZGrHab5-RyfZ-3F_HKMDf9Yl2S2BUtvw9-arCPYAhYTIqzLXJiMfxOmYJ3k-cdk33B4TsA_0vChGFgDnTF0CTqtaFqXp1mSau-cA7RLIspixiMCwQF2PdKckBE6aaZnpmYi0Ws1-MO8L5dV92SKEgQ552uI9tpKn4VMHcJCxXMDszaIgkX45ExmUeDpzBvjE2inNQS5a9dOxf0VyR2FAym_KhlREsPTr8PXk0SYV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-2 py-0.5 bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> CAM_02 // RIG_BAY
+            </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-mono font-bold">
+              03:48 REC
+            </div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/80 border border-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[24px]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide group-hover:text-primary transition-colors">
+              30 MT Hydraulic Coil Upender Commissioning Test
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hydrostatic test sequence verifying dual-cylinder valve synchronization and zero-shock decel.</p>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="bg-surface-container-low shadow-lg flex flex-col justify-between group">
+<div class="relative w-full h-48 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Night outdoor stevedoring rail car transporting four massive rolled coil reels across shipyard railway tracks, laser boundary sensors projecting faint red beam lines on the track." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGfCdYEzghyRKt0Lc6Q8m3rmZWX1021TO_0DdPXwBYIrQwCQCRiVt-EndVo4QKAFRQNWioHJHV02Uhvzw8qLWxwIV_pGDQw6lDBnHqYpI9oGaI7NNNLZ8zpFcTA2Z2DjaBtMOvPyJfAkyTE1D16HIUe1SYF_9ruGLnbcgrjPuCLgbiMVYQqRHtIIzpPOIeR1Qo7lC5rdGSpmgwgMA2Gt_7xVZgNhrnrZVcmZ6VlUx22ZkYZtSlI7YL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-2 py-0.5 bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> CAM_03 // TRANSIT
+            </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-mono font-bold">
+              02:50 REC
+            </div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/80 border border-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[24px]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide group-hover:text-primary transition-colors">
+              80 MT Rail Transfer Car Traversing Yard Complex
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Long-distance rail traversal showing wireless RF remote maneuvering and dual emergency trip wire.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Custom RFQ & GA Drawing Consultation Band -->
+<section class="w-full bg-surface-container-low px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl relative overflow-hidden">
+<!-- Subtle CAD Guide Lines Overlay -->
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none w-1/2 h-full">
+<svg class="w-full h-full" fill="none" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="180" stroke="#ffb597" stroke-dasharray="8 8" stroke-width="2"></circle>
+<circle cx="200" cy="200" r="120" stroke="#ffb597" stroke-width="1.5"></circle>
+<line stroke="#ffb597" stroke-width="1" x1="0" x2="400" y1="200" y2="200"></line>
+<line stroke="#ffb597" stroke-width="1" x1="200" x2="200" y1="0" y2="400"></line>
+</svg>
+</div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="bg-surface-container p-space-lg shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Consultation Copy Header -->
+<div class="lg:col-span-5 space-y-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary-container font-mono">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>ENGINEERING DIRECT SERVICE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide">
+              NEED CUSTOM COIL HANDLING RIGGING FOR NON-STANDARD COIL SIZES?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Our engineering office generates custom General Arrangement (GA) CAD schematics within 24 hours. Input your mill envelope metrics below for verified finite element analysis (FEA) compliant rigging configurations.
+            </p>
+<div class="pt-space-xs flex flex-wrap gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> 2D / 3D STEP Models Supplied
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span> Third-Party Inspection (TUV/SGS) Ready
+              </span>
+</div>
+</div>
+<!-- Parameter Entry Form Matrix -->
+<form class="lg:col-span-7 bg-surface-container-lowest p-space-md grid grid-cols-1 md:grid-cols-3 gap-space-sm" onsubmit="event.preventDefault(); alert('GA Engineering Package Request Transmitted. Ref ID: PRF-COIL-' + Math.floor(Math.random() * 90000 + 10000));">
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">REQUIRED SWL [MT]</label>
+<input class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. 45 MT" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">MIN / MAX COIL OD [MM]</label>
+<input class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. 1000 - 2200" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">COIL WIDTH RANGE [MM]</label>
+<input class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. 800 - 1800" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">PLANT / LOCATION</label>
+<input class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. Jamshedpur Steel Complex" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">OFFICIAL PHONE / WHATSAPP</label>
+<input class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="+91 98XXX XXXXX" required="" type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">CRANE HOOK SUSPENSION</label>
+<select class="w-full bg-surface-container text-on-surface px-space-sm py-2 font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Single Forged Eye (DIN 15401)</option>
+<option>Ramshorn Twin Hook (DIN 15402)</option>
+<option>Custom Spreader Beam Pin</option>
+</select>
+</div>
+<div class="md:col-span-3 pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+<span>Confidential Mill Data // Direct Engineering Desk Routing</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container px-space-lg py-2.5 rounded font-headline-sm text-headline-sm uppercase tracking-wider font-bold transition-all shadow-[0_0_16px_rgba(255,106,26,0.3)]" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                Request Custom GA Drawing &amp; Quote
+              </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for micro-interactions -->
+<script>
+    (function initCategoryControls() {
+      const slider = document.getElementById('capacityRange');
+      const valDisplay = document.getElementById('capacityValue');
+      const resetBtn = document.getElementById('resetFiltersBtn');
+      const counter = document.getElementById('activeFilterCounter');
+
+      if (slider && valDisplay) {
+        slider.addEventListener('input', (e) => {
+          valDisplay.textContent = '10 — ' + e.target.value + ' MT';
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (slider && valDisplay) {
+            slider.value = 80;
+            valDisplay.textContent = '10 — 80 MT';
+          }
+          if (counter) {
+            counter.textContent = '0';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-variant"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-surface-variant"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Prefer India</span><span class="bg-secondary-container/20 text-secondary border border-secondary-container px-1.5 py-0.5 rounded font-label-sm text-label-sm">EST. 1968</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Engineered custom heavy-duty material handling equipment from 4 MT to 120 MT since 1968. Precision metallurgy tooling, high-integrity structural fixtures, and plant safety engineering for tier-1 steel mills worldwide.</p><div class="pt-space-xs flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">BALLABGARH PLANT OPERATIONAL</span></div></div><div class="space-y-space-md"><h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider flex items-center gap-space-xs"><span class="w-1 h-3 bg-primary-container"></span>Equipment Lines</h3><ul class="space-y-2 font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary-container">chevron_right</span>Motorized Coil Lifters (Horizontal / Vertical)</li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary-container">chevron_right</span>Automatic Slab Tongs &amp; Billet Grabs</li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary-container">chevron_right</span>Sheet Pack &amp; Ingot Handling Lifters</li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary-container">chevron_right</span>Heavy Mill Transfer Cars (Up to 120 MT)</li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary-container">chevron_right</span>Industrial Vacuum Lifters &amp; C-Hooks</li></ul></div><div class="space-y-space-md"><h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider flex items-center gap-space-xs"><span class="w-1 h-3 bg-secondary"></span>Technical Documentation</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Direct certified engineering schematics and QA compliance sheets.</p><div class="space-y-space-sm"><a class="flex items-center justify-between p-space-sm bg-surface-container-low border border-surface-variant hover:border-primary-container transition-all group" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[20px]">description</span><div><div class="font-label-sm text-label-sm text-on-surface uppercase group-hover:text-primary transition-colors">Product Catalog 2024</div><div class="font-label-sm text-label-sm text-on-surface-variant">PDF • 18.4 MB</div></div></div><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary text-[18px]">download</span></a><a class="flex items-center justify-between p-space-sm bg-surface-container-low border border-surface-variant hover:border-primary-container transition-all group" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">verified</span><div><div class="font-label-sm text-label-sm text-on-surface uppercase group-hover:text-primary transition-colors">ISO 9001:2015 Spec Sheet</div><div class="font-label-sm text-label-sm text-on-surface-variant">PDF • 2.1 MB</div></div></div><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary text-[18px]">download</span></a></div></div><div class="space-y-space-md"><h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider flex items-center gap-space-xs"><span class="w-1 h-3 bg-primary"></span>Plant &amp; Headquarters</h3><div class="font-body-sm text-body-sm text-on-surface-variant space-y-1"><p class="text-on-surface font-semibold">Prefer India Works Facility</p><p>Plot 48, Sector 25, Ballabgarh Industrial Zone</p><p>Faridabad, Haryana 121004, India</p></div><div class="space-y-space-xs pt-space-xs"><div class="flex items-center gap-space-xs font-label-sm text-label-sm"><span class="material-symbols-outlined text-error text-[16px]">warning</span><span class="text-on-surface-variant uppercase">Emergency Plant Line:</span><a class="text-error hover:underline" href="tel:+911294008820">+91 129 400 8820</a></div><a class="inline-flex items-center gap-space-xs bg-surface-container border border-surface-variant hover:border-secondary px-space-sm py-1.5 rounded transition-all text-on-surface hover:text-secondary font-label-sm text-label-sm uppercase tracking-wider" href="https://wa.me/911294008822" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px] text-secondary">chat</span>Instant WhatsApp Inquiry</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Prefer India. All rights reserved. Heavy Material Handling Division.</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><span class="px-2 py-0.5 bg-surface-container border border-surface-variant text-tertiary rounded uppercase tracking-wider">SPEC: ISO 9001-CERTIFIED</span><span class="px-2 py-0.5 bg-surface-container border border-surface-variant text-tertiary rounded uppercase tracking-wider">BUILD: V4.1.0-STABLE</span></div></div></div></footer></body></html>

@@ -1,0 +1,6 @@
+{
+  "name": "Prefer India - Heavy Mill Cranes & Lifters",
+  "description": "Custom-engineered heavy-duty material handling equipment, motorized coil lifters, automated slab tongs, transfer cars, and metallurgical lifting rigs for tier-1 steel mills.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
